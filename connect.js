@@ -6,13 +6,15 @@ function get_weather(){
     //data -->result-->main--->temp
     fetch(url)
     .then(res => res.json())
-    .then(data => {
-        let desc = data["result"]["weather"][0]["description"]
+    .then(data =>{
+        console.log(data)
+        // data-->result-->weather-->0-->description
+        let description = data["result"]["weather"][0]["description"]
         let temp = data["result"]["main"]["temp"]
-        let body = document.querySelector("div")
-        body.innerHTML = `
-            <h1> وضعیت کلی : ${desc}</h1>
-            <h1> دمای هوا : ${temp}</h1>
-        `
+        console.log(description)
+        let wDiv = document.querySelector(".city")
+        wDiv.innerHTML = `<h1>وضعیت کلی: ${description} </h1>`
+        let tempDiv = document.querySelector(".current")
+        tempDiv.innerHTML =  `${temp}&deg;`
     })
 }
