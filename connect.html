@@ -7,10 +7,39 @@
     <title>Document</title>
 </head>
 <body>
+
     <input type="text">
     <button onclick="get_weather()">Get Weather</button>
-    <div>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<div class="wrapper">
+  <div class="weather">
+    <div class="city"><h1></h1></div>
+          <div class="clearfix"></div>
+
+    <div class="cont">
+      <div class="icon">
+        <i class="fa fa-sun-o spin glow"></i>
+        <i class="fa fa-cloud wind"></i>
+        <i class="fa fa-cloud two"></i>
+      </div>
+      <div class="temp">
+        <div class="current">
+          ...
+        </div>
+        <div class="high">
+          High: 20&deg;
+        </div>
+        <div class="low">
+          Low: 5&deg;
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="left"><i class="fa fa-angle-left"></i></div>
+      <div class="date"><p>06/21/2013</p></div>
+      <div class="right"><i class="fa fa-angle-right"></i></div>
     </div>
+  </div> <!-- weather -->
+</div> <!-- wrapper -->
   <script src="connect.js"></script>
 </body>
 </html>
